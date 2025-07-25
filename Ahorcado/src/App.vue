@@ -147,20 +147,20 @@
           <p v-if="maxErrores">Tienes: {{ maxErrores }} intentos</p>
           <p v-if="errores">Errores: {{ errores }}</p>
         </div>
-      </div>
-      <div class="contendorTecladoVirtual">
-        <button
-        v-for="letra in abecedario"
-        :key="letra"
-        @click="adivinarLetra(letra)"
-        :disabled="letrasAdivinadas.includes(letra) || juegoTerminado || juegoGanado"
-        class="tecla"
-        >
-          {{ letra.toUpperCase() }}
-      </button>
-      <button class="tecla tecla-especial" @click="reiniciarJuego()">
-        Reiniciar
-      </button>
+        <div class="contendorTecladoVirtual">
+          <button
+          v-for="letra in abecedario"
+          :key="letra"
+          @click="adivinarLetra(letra)"
+          :disabled="letrasAdivinadas.includes(letra) || juegoTerminado || juegoGanado"
+          class="tecla"
+          >
+            {{ letra.toUpperCase() }}
+        </button>
+        <button class="tecla tecla-especial" @click="reiniciarJuego()">
+          Reiniciar
+        </button>
+        </div>
       </div>
       <div class="btnVolver">
         <button class="volver" @click="botonVolverCategorias()">⬅️</button>
